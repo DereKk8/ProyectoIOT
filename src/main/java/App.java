@@ -120,6 +120,7 @@ public class App {
         if (empleadoIngreso != null) {
             System.out.println("Empleado: " + empleadoIngreso.getNombre() + " ha ingresado al edificio");
             System.out.println("Hora de ingreso: " + horaActual);
+            System.out.println("-----------------------------------------");
             String registro = "[" + id + "] " + empleadoIngreso.getNombre() + " HR: " + horaActual + " - [ACCESO PERMITIDO]";
             ManejadorArchivos.escribirArchivo(registro);
         }
@@ -131,6 +132,7 @@ public class App {
         if (empleadoIngreso != null) {
             System.out.println("Empleado: " + empleadoIngreso.getNombre() + " ha ingresado al edificio");
             System.out.println("Hora de ingreso: " + horaActual);
+            System.out.println("-----------------------------------------");
             String registro = "[" + id + "] " + empleadoIngreso.getNombre() + " HR: " + horaActual + " - [ACCESO PERMITIDO TARDE " + Duration.between(empleadoIngreso.getHorarioAdmitido().getHoraFin(), LocalTime.now()).toMinutes() + " minutos tarde]";
             ManejadorArchivos.escribirArchivo(registro);
         }
@@ -142,6 +144,7 @@ public class App {
         if (empleadoIngreso != null) {
             System.out.println("Empleado: " + empleadoIngreso.getNombre() + " ha intentado ingresar al edificio");
             System.out.println("Hora de ingreso: " + horaActual);
+            System.out.println("-----------------------------------------");
             String registro = "[" + id + "] " + empleadoIngreso.getNombre() + " HR: " + horaActual + " - [ACCESO DENEGADO]";
             ManejadorArchivos.escribirArchivo(registro);
         }
@@ -149,6 +152,7 @@ public class App {
 
     public static void manejarEmpleadoNoRegistrado(String id, String horaActual) {
         System.out.println("Empleado no registrado [" + id + "]");
+        System.out.println("-----------------------------------------");
         String registro = "[" + id + "] N.R HR: " + horaActual + " - [EMPLEADO NO REGISTRADO]";
         ManejadorArchivos.escribirArchivo(registro);
     }

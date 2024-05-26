@@ -1,5 +1,3 @@
-[3] Juan Sebastian Sanchez HR: 14:13 - [ACCESO DENEGADO]
-[2] Santiago Avila Perez HR: 14:13 - [ACCESO DENEGADO]
-[11] N.R HR: 14:13 - [EMPLEADO NO REGISTRADO]
-[1] Derek Sarmiento Loeber HR: 14:13 - [ACCESO DENEGADO]
-[3] Juan Sebastian Sanchez HR: 14:14 - [ACCESO DENEGADO]
+
+[1] Derek Sarmiento Loeber HR: 12:14 - [ACCESO DENEGADO]
+[1] Derek Sarmiento Loeber HR: 12:15 - [ACCESO PERMITIDO TARDE 105 minutos tarde]
