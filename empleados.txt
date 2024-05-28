@@ -1,4 +1,4 @@
-1,Derek Sarmiento Loeber,8,0,10,30,11,15,13,50
-2,Santiago Avila Perez,8,15,10,45,11,30,14,0
-3,Juan Sebastian Sanchez,6,45,8,15,9,0,11,15
+1,Derek Sarmiento Loeber,12,0,12,20,18,15,18,50
+2,Santiago Avila Perez,13,15,13,45,14,0,14,0
+3,Juan Sebastian Sanchez,6,45,8,15,18,0,18,50
 4,Ana Gómez Sánchez,7,30,9,0,10,15,12,45

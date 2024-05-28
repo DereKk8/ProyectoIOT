@@ -18,16 +18,16 @@ public class ManejadorAcceso {
             return 4; //Empleado no registrado
         }
         else{
-            for (Empleado empleado : empleados) {
-                if (empleado.getId().equals(id) && empleado.getHorarioAdmitido().getHoraInicio().isBefore(LocalTime.now()) && empleado.getHorarioAdmitido().getHoraFin().isAfter(LocalTime.now())){
-                    return 1; //Acceso permitido
-                }else if(empleado.getId().equals(id) && empleado.getHorarioAdmitido().getHoraFin().isBefore(LocalTime.now()) && empleado.getHorarioAdmitido().getHoraInicioTarde().isBefore(LocalTime.now()) && empleado.getHorarioAdmitido().getHoraFinTarde().isAfter(LocalTime.now())){
-                    return 2; //Acceso permitido Tarde
-                }else
-                    return 3; //Acceso denegado
+            Empleado empleado = empleados.stream().filter(e -> e.getId().equals(id)).findFirst().get();
+            LocalTime horaActual = LocalTime.now();
+            if(horaActual.isAfter(empleado.getHorarioAdmitido().getHoraInicio()) && horaActual.isBefore(empleado.getHorarioAdmitido().getHoraFin())){
+                return 1; //Acceso permitido
+            }else if(horaActual.isAfter(empleado.getHorarioAdmitido().getHoraInicioTarde()) && horaActual.isBefore(empleado.getHorarioAdmitido().getHoraFinTarde())){
+                return 2; //Acceso permitido tarde
+            }else{
+                return 3; //Acceso denegado
             }
         }
-        return 0;
     }
 
 }

@@ -60,6 +60,7 @@ public class App {
                                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
                                 String horaActual = LocalTime.now().format(formatter);
 
+
                                 if (estadoAcceso == 1) {
                                     enviarMensaje(client, "Sensor/Accion", "1");
                                     manejarAccesoPermitido(id, horaActual);
@@ -187,5 +188,18 @@ public class App {
             }
         }
         return null;
+    }
+
+    public static void mostrarHorarioEmpleado(String id) {
+        Empleado empleado = buscarEmpleado(id);
+        if (empleado != null) {
+            System.out.println("Horario de " + empleado.getNombre());
+            System.out.println("Horario de ingreso: " + empleado.getHorarioAdmitido().getHoraInicio());
+            System.out.println("Horario de salida: " + empleado.getHorarioAdmitido().getHoraFin());
+            System.out.println("Horario de ingreso tarde: " + empleado.getHorarioAdmitido().getHoraInicioTarde());
+            System.out.println("Horario de salida tarde: " + empleado.getHorarioAdmitido().getHoraFinTarde());
+        } else {
+            System.out.println("Empleado no encontrado");
+        }
     }
 }
